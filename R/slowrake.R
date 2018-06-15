@@ -129,7 +129,7 @@ slowrake <- function(txt,
   num_docs <- length(txt)
   one_doc <- num_docs == 1
   if (!one_doc)
-    prog_bar <- utils::txtProgressBar(min = 0, max = num_docs, style = 3)
+    #prog_bar <- utils::txtProgressBar(min = 0, max = num_docs, style = 3)
 
   all_out <- vector(mode = "list", length = num_docs)
 
@@ -149,7 +149,7 @@ slowrake <- function(txt,
       word_token_annotator = word_token_annotator,
       phrase_delims = phrase_delims
     )
-    if (!one_doc) utils::setTxtProgressBar(prog_bar, i)
+    #if (!one_doc) utils::setTxtProgressBar(prog_bar, i)
   }
 
   structure(
